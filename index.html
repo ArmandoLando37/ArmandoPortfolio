@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Armando Lando | Développeur Web</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script src="./tailwind.config.js"></script>
+
+
+            <!-- SECTION DES STYLES -->
+            
+            <link rel="stylesheet" href="./styles.css">
+            
+            <!-- SECTION STYLE DE POLICE -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+  
+    
+  </head>
+  <body class="dark bg-[var(--bg-color)] text-[var(--text-color)]">
+    <!-- Navbar -->
+    <nav
+      class="fixed top-0 left-0 w-full z-50 bg-secondary bg-opacity-90 backdrop-blur-sm transition-all duration-300"
+    >
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="text-primary font-['Pacifico'] text-2xl">Armando Landos</a>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a
+            href="#home"
+            class="nav-link text-sm font-medium hover:text-primary transition-colors"
+            >Accueil</a
+          >
+          <a
+            href="#about"
+            class="nav-link text-sm font-medium hover:text-primary transition-colors"
+            >À Propos</a
+          >
+          <a
+            href="#projects"
+            class="nav-link text-sm font-medium hover:text-primary transition-colors"
+            >Projets</a
+          >
+          <a
+            href="#contact"
+            class="nav-link text-sm font-medium hover:text-primary transition-colors"
+            >Contact</a
+          >
+          <div class="flex items-center ml-4">
+            <span class="mr-2 text-xs text-white"
+              ><i class="ri-sun-line"></i
+            ></span>
+            <label class="toggle-switch">
+              <input type="checkbox" id="theme-toggle" />
+              <span class="toggle-slider"></span>
+            </label>
+            <span class="ml-2 text-xs text-white"
+              ><i class="ri-moon-line"></i
+            ></span>
+          </div>
+        </div>
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-menu-button"
+          class="md:hidden flex items-center text-white"
+        >
+          <i class="ri-menu-line text-2xl"></i>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-secondary bg-opacity-95 backdrop-blur-sm"
+      >
+        <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+          <a
+            href="#home"
+            class="mobile-nav-link text-sm font-medium text-white hover:text-primary transition-colors"
+            >Accueil</a
+          >
+          <a
+            href="#about"
+            class="mobile-nav-link text-sm font-medium text-white hover:text-primary transition-colors"
+            >À Propos</a
+          >
+          <a
+            href="#projects"
+            class="mobile-nav-link text-sm font-medium text-white hover:text-primary transition-colors"
+            >Projets</a
+          >
+          <a
+            href="#contact"
+            class="mobile-nav-link text-sm font-medium text-white hover:text-primary transition-colors"
+            >Contact</a
+          >
+          <div class="flex items-center">
+            <span class="mr-2 text-xs text-white"
+              ><i class="ri-sun-line"></i
+            ></span>
+            <label class="toggle-switch">
+              <input type="checkbox" id="mobile-theme-toggle" />
+              <span class="toggle-slider"></span>
+            </label>
+            <span class="ml-2 text-xs text-white"
+              ><i class="ri-moon-line"></i
+            ></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center hero-pattern pt-20"
+    >
+      <div class="container mx-auto px-4 py-20 md:py-0">
+        <div class="section max-w-4xl mx-auto">
+          <p class="text-primary font-mono mb-4">Bonjour, je m'appelle</p>
+          <h1 class="text-4xl md:text-6xl font-bold mb-4">ANDRIATSARAFARA Befakomanana Armando Landos</h1>
+          <h2
+            class="text-2xl md:text-4xl font-semibold text-[var(--text-secondary)] mb-6"
+          >
+            Développeur Back-end | Étudiant en Génie Logiciel
+          </h2>
+          <p class="text-[var(--text-secondary)] max-w-xl mb-8">
+            Passionné par le développement web et l'intelligence artificielle.
+            Je crée des solutions numériques innovantes et je suis constamment
+            en train d'apprendre de nouvelles technologies.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="#contact"
+              class="border border-primary text-primary hover:bg-primary hover:bg-opacity-10 px-6 py-3 !rounded-button whitespace-nowrap transition-colors"
+              >Me Contacter</a
+            >
+            <a
+              href="#projects"
+              class="bg-primary text-secondary hover:bg-opacity-90 px-6 py-3 !rounded-button whitespace-nowrap transition-colors"
+              >Voir mes projets</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="section max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold mb-2">À Propos</h2>
+          <div class="w-20 h-1 bg-primary mb-10"></div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div>
+              <div class="relative w-full max-w-md mx-auto md:mx-0">
+                <div
+                  class="aspect-square rounded-lg overflow-hidden border-2 border-primary"
+                >
+                  <img
+                    src="./images/profile-pic.png"
+                    alt="Armando Lando"
+                    class="w-full h-full object-cover object-top"
+                  />
+                </div>
+              </div>
+            </div>
+            <div>
+              <p class="text-[var(--text-secondary)] mb-6">
+                Je suis un étudiant en génie logiciel basé à Madagascar,
+                passionné par le développement web et l'intelligence
+                artificielle. Actuellement, je me forme en autodidacte sur les
+                technologies d'IA tout en poursuivant mes études.
+              </p>
+              <p class="text-[var(--text-secondary)] mb-6">
+                J'ai eu l'opportunité de diriger une équipe de 18 étudiants sur
+                un projet de calcul de surface terrestre utilisant l'API Google
+                Maps, avec des versions web et Android. Cette expérience m'a
+                permis de développer mes compétences techniques et de
+                leadership.
+              </p>
+              <p class="text-[var(--text-secondary)] mb-8">
+                Je suis ouvert aux opportunités de freelance, particulièrement
+                pour les sites web de petites entreprises ou les sites vitrines,
+                et je cherche à construire un portfolio solide pour attirer des
+                clients.
+              </p>
+              <h3 class="text-xl font-semibold mb-4">Mes compétences</h3>
+              <div class="space-y-4">
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <span>Front-end (React.js, HTML, CSS, JavaScript)</span>
+                    <span>80%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 80%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <span>Back-end (Node.js, Express.js, REST API)</span>
+                    <span>85%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 85%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <span>Base de données (MySQL, Firebase)</span>
+                    <span>75%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 75%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <span>En apprentissage (Python, Arduino, GraphQL)</span>
+                    <span>40%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 40%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-secondary bg-opacity-30">
+      <div class="container mx-auto px-4">
+        <div class="section max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold mb-2">Mes Projets</h2>
+          <div class="w-20 h-1 bg-primary mb-10"></div>
+          <!-- Main Project -->
+          <div
+            class="bg-[var(--card-bg)] rounded-lg shadow-lg overflow-hidden mb-12 project-card"
+          >
+            <div class="grid grid-cols-1 md:grid-cols-2">
+              <div class="p-6 flex flex-col justify-center">
+                <h3 class="text-2xl font-semibold mb-3">
+                  Calculateur de Surface Terrestre
+                </h3>
+                <p class="text-[var(--text-secondary)] mb-4">
+                  J'ai dirigé une équipe de 18 étudiants pour développer une
+                  application permettant de calculer la surface terrestre à
+                  l'aide de l'API Google Maps, avec des versions web et Android.
+                </p>
+                <div class="mb-4">
+                  <h4 class="font-medium mb-2">Technologies utilisées:</h4>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="bg-secondary bg-opacity-20 text-primary px-3 py-1 rounded-full text-xs"
+                      >React.js</span
+                    >
+                    <span
+                      class="bg-secondary bg-opacity-20 text-primary px-3 py-1 rounded-full text-xs"
+                      >Node.js</span
+                    >
+                    <span
+                      class="bg-secondary bg-opacity-20 text-primary px-3 py-1 rounded-full text-xs"
+                      >Firebase Auth</span
+                    >
+                    <span
+                      class="bg-secondary bg-opacity-20 text-primary px-3 py-1 rounded-full text-xs"
+                      >Google Maps API</span
+                    >
+                    <span
+                      class="bg-secondary bg-opacity-20 text-primary px-3 py-1 rounded-full text-xs"
+                      >Python</span
+                    >
+                  </div>
+                </div>
+                <div>
+                  <h4 class="font-medium mb-2">Fonctionnalités:</h4>
+                  <ul
+                    class="list-disc list-inside text-[var(--text-secondary)] space-y-1"
+                  >
+                    <li>Calcul précis des surfaces terrestres</li>
+                    <li>Estimation des prix basée sur Python</li>
+                    <li>Export PDF/Excel des résultats</li>
+                    <li>Authentification sécurisée</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="bg-secondary">
+                <img
+                  src="./images/mapArea.jpg"
+                  alt="Calculateur de Surface Terrestre"
+                  class="w-full h-full object-cover object-top"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Other Projects -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div
+              class="bg-[var(--card-bg)] rounded-lg shadow-lg p-6 project-card"
+            >
+              <h3 class="text-xl font-semibold mb-3">Chat en Temps Réel</h3>
+              <p class="text-[var(--text-secondary)] mb-4">
+                Développement d'une application de chat en temps réel avec
+                authentification, messages privés et salons de discussion.
+              </p>
+              <div class="mb-4">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-secondary bg-opacity-20 text-primary px-3 py-1 rounded-full text-xs"
+                    >HTML/CSS</span
+                  >
+                  <span
+                    class="bg-secondary bg-opacity-20 text-primary px-3 py-1 rounded-full text-xs"
+                    >JavaScript</span
+                  >
+                  <span
+                    class="bg-secondary bg-opacity-20 text-primary px-3 py-1 rounded-full text-xs"
+                    >AJAX</span
+                  >
+                  <span
+                    class="bg-secondary bg-opacity-20 text-primary px-3 py-1 rounded-full text-xs"
+                    >PHP</span
+                  >
+                  <span
+                    class="bg-secondary bg-opacity-20 text-primary px-3 py-1 rounded-full text-xs"
+                    >MySQL</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-[var(--card-bg)] rounded-lg shadow-lg p-6 project-card"
+            >
+              <h3 class="text-xl font-semibold mb-3">
+                API REST pour Gestion d'Inventaire
+              </h3>
+              <p class="text-[var(--text-secondary)] mb-4">
+                Développement d'une API REST complète pour la gestion
+                d'inventaire d'une petite entreprise.
+              </p>
+              <div class="mb-4">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-secondary bg-opacity-20 text-primary px-3 py-1 rounded-full text-xs"
+                    >Node.js</span
+                  >
+                  <span
+                    class="bg-secondary bg-opacity-20 text-primary px-3 py-1 rounded-full text-xs"
+                    >Express</span
+                  >
+                  <span
+                    class="bg-secondary bg-opacity-20 text-primary px-3 py-1 rounded-full text-xs"
+                    >MySQL</span
+                  >
+                  <span
+                    class="bg-secondary bg-opacity-20 text-primary px-3 py-1 rounded-full text-xs"
+                    >Postman</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="section max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold mb-2">Contact</h2>
+          <div class="w-20 h-1 bg-primary mb-10"></div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div>
+              <p class="text-[var(--text-secondary)] mb-6">
+                Je suis actuellement disponible pour des projets freelance,
+                particulièrement des sites web pour petites entreprises ou des
+                sites vitrines. N'hésitez pas à me contacter pour discuter de
+                votre projet.
+              </p>
+              <div class="space-y-4 mb-8">
+                <div class="flex items-center">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center text-primary"
+                  >
+                    <i class="ri-mail-line ri-lg"></i>
+                  </div>
+                  <a
+                    href="mailto:tsarafara.37@gmail.com"
+                    class="hover:text-primary transition-colors"
+                    >tsarafara.37@gmail.com</a
+                  >
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center text-primary"
+                  >
+                    <i class="ri-phone-line ri-lg"></i>
+                  </div>
+                  <a
+                    href="tel:+261339017309"
+                    class="hover:text-primary transition-colors"
+                    >+261 32 90 173 09</a
+                  >
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center text-primary"
+                  >
+                    <i class="ri-facebook-fill ri-lg"></i>
+                  </div>
+                  <a
+                    href="https://www.facebook.com/armando.lando.56"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="hover:text-primary transition-colors"
+                    >facebook.com/armando.lando.56</a
+                  >
+                </div>
+              </div>
+              <div class="flex space-x-4">
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-10 h-10 flex items-center justify-center border border-[var(--text-secondary)] rounded-full hover:border-primary hover:text-primary transition-colors"
+                >
+                  <i class="ri-github-line"></i>
+                </a>
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-10 h-10 flex items-center justify-center border border-[var(--text-secondary)] rounded-full hover:border-primary hover:text-primary transition-colors"
+                >
+                  <i class="ri-linkedin-line"></i>
+                </a>
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-10 h-10 flex items-center justify-center border border-[var(--text-secondary)] rounded-full hover:border-primary hover:text-primary transition-colors"
+                >
+                  <i class="ri-twitter-x-line"></i>
+                </a>
+              </div>
+            </div>
+            <div>
+              <form class="space-y-4">
+                <div>
+                  <label for="name" class="block text-sm font-medium mb-1"
+                    >Nom</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    class="w-full px-4 py-2 bg-transparent border border-[var(--text-secondary)] rounded focus:border-primary"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="email" class="block text-sm font-medium mb-1"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="w-full px-4 py-2 bg-transparent border border-[var(--text-secondary)] rounded focus:border-primary"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="message" class="block text-sm font-medium mb-1"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    rows="5"
+                    class="w-full px-4 py-2 bg-transparent border border-[var(--text-secondary)] rounded focus:border-primary"
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="bg-primary text-secondary hover:bg-opacity-90 px-6 py-3 !rounded-button whitespace-nowrap transition-colors"
+                >
+                  Envoyer
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer
+      class="py-8 border-t border-[var(--text-secondary)] border-opacity-20"
+    >
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-[var(--text-secondary)] text-sm">
+          © 2025 Armando Lando. Tous droits réservés.
+        </p>
+      </div>
+    </footer>
+    <script src="./scripts.js" defer> </script>
+  </body>
+</html>
