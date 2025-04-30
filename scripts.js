@@ -122,21 +122,3 @@ document.addEventListener("DOMContentLoaded", function () {
       navObserver.observe(section);
     });
   });
-  // Form submission
-  document.addEventListener("DOMContentLoaded", function () {
-    const contactForm = document.querySelector("form");
-    contactForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-      // Get form values
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const message = document.getElementById("message").value;
-      // Here you would normally send the data to a server
-      // For demo purposes, we'll just show an alert
-      alert(
-        `Merci ${name} pour votre message! Je vous contacterai bientôt.`
-      );
-      // Reset form
-      contactForm.reset();
-    });
-  });
