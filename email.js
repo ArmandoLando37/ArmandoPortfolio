@@ -9,7 +9,8 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
     .then(function(response) {
 
       alert("✅ Message envoyé avec succès !");
-      this.reset();
+      e.target.reset();
+  
     }, function(error) {
 
       alert("❌ Erreur : " + JSON.stringify(error));
